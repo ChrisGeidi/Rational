@@ -20,7 +20,7 @@ class rational
 {
     int z, n;
     const int serial;
-    static int counter;
+    int counter;
     void kuerze();
     int ggt() const;
 
@@ -33,6 +33,7 @@ public:
     int getSerial() const;
     void setZaehler(int);
     void setNenner(int);
+    double toDouble();
     rational operator+ (rational) const;
     rational operator- (rational) const;
     rational operator* (rational) const;

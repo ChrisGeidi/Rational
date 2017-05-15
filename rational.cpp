@@ -18,12 +18,10 @@
 #include "rational.h"
 #include <iostream>
 
-int rational::counter=0;
 
 rational::rational():rational(0, 1)
 {
 }
-
 
 // Custom Konstruktor der Klasse rational für zwei Parameter
 rational::rational(int iZaehler, int iNenner) : serial(++counter)
@@ -132,6 +130,10 @@ void rational::kuerze()
     setNenner(getNenner() / iGgt);
 }
 
+double rational::toDouble()
+{
+    return (double)getZaehler() / (double)getNenner();
+}
 
 #endif //RATIONAL_CPP
 
