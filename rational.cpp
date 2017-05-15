@@ -18,6 +18,7 @@
 #include "rational.h"
 #include <iostream>
 
+rational::counter = 0;
 
 rational::rational():rational(0, 1)
 {

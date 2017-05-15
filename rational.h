@@ -19,12 +19,12 @@
 class rational
 {
     int z, n;
-    const int serial;
-    int counter;
+    int serial;
     void kuerze();
     int ggt() const;
 
 public:
+    static int counter;
     rational();
     rational(int);
     rational(int, int);
