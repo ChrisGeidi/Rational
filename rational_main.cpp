@@ -23,8 +23,8 @@ int main ()
     rational r, s, t;
     int b;
     // Per Default wird daher z = 0 und n = 1 gesetzt
-    cout << "r = " << r.getZaehler () << "/" << r.getNenner () << endl;
-    cout << "s = " << s.getZaehler () << "/" << s.getNenner () << endl;
+    cout << r << endl;
+    cout << s << endl;
     cout << "Geben Sie einen Wert fuer den Zaehler ein:" << endl;
     cin >> b;
     // Anwendung der Funktion setZaehler auf das Objekt r
@@ -34,7 +34,7 @@ int main ()
     // Anwendung der Funktion setNenner auf das Objekt r
     r.setNenner (b);
     // Ausgabe des geaenderten Objektzustandes
-    cout << "r = " << r.getZaehler() << "/" << r.getNenner() << endl;
+    cout << "r = " << r << endl;
 
     cout << "Geben Sie einen Wert fuer den Zaehler ein:" << endl;
     cin >> b;
@@ -45,23 +45,23 @@ int main ()
     // Anwendung der Funktion setNenner auf das Objekt r
     s.setNenner (b);
     // Ausgabe des geaenderten Objektzustandes
-    cout << "s = " << s.getZaehler() << "/" << s.getNenner() << endl;
+    cout << "s = " << s << endl;
 
     // Addieren der beiden Brueche
     t = r + s;
-    cout << "r + s = " << t.getZaehler() << "/" << t.getNenner() << endl;
+    cout << "r + s = " << t << endl;
 
     // Subtrahieren der beiden Brueche
     t = r-s;
-    cout << "r - s = " << t.getZaehler() << "/" << t.getNenner() << endl;
+    cout << "r - s = " << t << endl;
 
     // multiplizieren der beiden Brueche
     t = r * s;
-    cout << "r * s = " << t.getZaehler() << "/" << t.getNenner() << endl;
+    cout << "r * s = " << t << endl;
 
     // dividieren der beiden Brueche
     t = r / s;
-    cout << "r / s = " << t.getZaehler() << "/" << t.getNenner() << endl;
+    cout << "r / s = " << t << endl;
 
     cout << r.getSerial() << s.getSerial() << t.getSerial()<<endl;
 
@@ -74,6 +74,8 @@ int main ()
     cout << "r == s = " << (r == s) << endl;
 
     cout << "r != s = " << (r != s) << endl;
+
+    //cout << t.toString() << endl;
 
     return 0;
 }

@@ -17,7 +17,11 @@
 
 #include "rational.h"
 #include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 
+#define MAX_LENGTH 30
+using namespace std;
 //static rational::counter = 0;
 
 rational::rational():rational(0, 1)
@@ -173,6 +177,13 @@ void rational::kuerze()
 double rational::toDouble()
 {
     return (double)getZaehler() / (double)getNenner();
+}
+
+ostream& operator<< (ostream& os, const rational& ratBruch)
+{
+    os<< ratBruch.getZaehler() << "/" << ratBruch.getNenner();
+
+    return os;
 }
 
 #endif //RATIONAL_CPP
