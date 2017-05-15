@@ -65,6 +65,7 @@ int main ()
 
     cout<< r.getSerial()<< s.getSerial() << t.getSerial()<<endl;
 
+    cout<< t.toDouble()<<endl;
     return 0;
 }
 
