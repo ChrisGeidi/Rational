@@ -63,9 +63,18 @@ int main ()
     t = r / s;
     cout << "r / s = " << t.getZaehler() << "/" << t.getNenner() << endl;
 
-    cout<< r.getSerial()<< s.getSerial() << t.getSerial()<<endl;
+    cout << r.getSerial() << s.getSerial() << t.getSerial()<<endl;
 
-    cout<< t.toDouble()<<endl;
+    cout << t.toDouble() << endl;
+
+    cout << "r > s = " << (r > s) << endl;
+
+    cout << "r < s = " << (r < s) << endl;
+
+    cout << "r == s = " << (r == s) << endl;
+
+    cout << "r != s = " << (r != s) << endl;
+
     return 0;
 }
 

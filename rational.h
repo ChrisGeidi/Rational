@@ -19,12 +19,12 @@
 class rational
 {
     int z, n;
+    unsigned int counter;
     int serial;
     void kuerze();
     int ggt() const;
 
 public:
-    static int counter;
     rational();
     rational(int);
     rational(int, int);
@@ -38,6 +38,10 @@ public:
     rational operator- (rational) const;
     rational operator* (rational) const;
     rational operator/ (rational) const;
+    bool operator> (rational) const;
+    bool operator< (rational) const;
+    bool operator== (rational) const;
+    bool operator!= (rational) const;
 
 };
 

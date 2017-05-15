@@ -18,7 +18,7 @@
 #include "rational.h"
 #include <iostream>
 
-rational::counter = 0;
+//static rational::counter = 0;
 
 rational::rational():rational(0, 1)
 {
@@ -107,6 +107,45 @@ rational rational::operator/(rational ratBruch) const
     return ratErgebnis;
 }
 
+bool rational::operator> (rational ratBruch) const
+{
+    rational ratTemp(getZaehler(), getNenner());
+
+    ratTemp.setZaehler(ratTemp.getZaehler() * ratBruch.getNenner());
+    ratBruch.setZaehler(ratTemp.getNenner() * ratBruch.getZaehler());
+
+    return (bool)(ratTemp.getZaehler() > ratBruch.getZaehler());
+}
+
+bool rational::operator< (rational ratBruch) const
+{
+    rational ratTemp(getZaehler(), getNenner());
+
+    ratTemp.setZaehler(ratTemp.getZaehler() * ratBruch.getNenner());
+    ratBruch.setZaehler(ratTemp.getNenner() * ratBruch.getZaehler());
+
+    return (bool)(ratTemp.getZaehler() < ratBruch.getZaehler());
+}
+
+bool rational::operator== (rational ratBruch) const
+{
+    rational ratTemp(getZaehler(), getNenner());
+
+    ratTemp.setZaehler(ratTemp.getZaehler() * ratBruch.getNenner());
+    ratBruch.setZaehler(ratTemp.getNenner() * ratBruch.getZaehler());
+
+    return (bool)(ratTemp.getZaehler() == ratBruch.getZaehler());
+}
+
+bool rational::operator!= (rational ratBruch) const
+{
+    rational ratTemp(getZaehler(), getNenner());
+
+    ratTemp.setZaehler(ratTemp.getZaehler() * ratBruch.getNenner());
+    ratBruch.setZaehler(ratTemp.getNenner() * ratBruch.getZaehler());
+
+    return (bool)(ratTemp.getZaehler() != ratBruch.getZaehler());
+}
 
 int rational::ggt() const
 {
