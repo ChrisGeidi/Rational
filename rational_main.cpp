@@ -41,6 +41,8 @@ int main ()
     cin >> b;
     // Anwendung der Funktion setNenner auf das Objekt r
     r.setNenner (b);
+    // Anwendung der Funktion changeSign auf das Objekt r
+    r.changeSign();
     // Ausgabe des geaenderten Objektzustandes
     cout << "r = " << r << endl << endl;
 
@@ -50,8 +52,10 @@ int main ()
     s.setZaehler (b);
     cout << "Geben Sie einen Wert fuer den Nenner des zweiten Bruches ein:" << endl;
     cin >> b;
-    // Anwendung der Funktion setNenner auf das Objekt r
+    // Anwendung der Funktion setNenner auf das Objekt s
     s.setNenner (b);
+    // Anwendung der Funktion changeSign auf das Objekt s
+    s.changeSign();
     // Ausgabe des geaenderten Objektzustandes
     cout << "s = " << s << endl << endl;
 

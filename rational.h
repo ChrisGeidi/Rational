@@ -33,6 +33,7 @@ public:
     int getSerial() const;
     void setZaehler(int);
     void setNenner(int);
+    void changeSign();
     double toDouble();
     rational operator+ (rational) const;
     rational operator- (rational) const;

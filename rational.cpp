@@ -73,6 +73,7 @@ rational rational::operator+ (rational ratBruch) const
     ratErgebnis.setZaehler(getZaehler() * ratBruch.getNenner() + getNenner() * ratBruch.getZaehler());
     ratErgebnis.setNenner(getNenner() * ratBruch.getNenner());
     ratErgebnis.kuerze();
+    ratErgebnis.changeSign();
 
     return ratErgebnis;
 }
@@ -84,6 +85,8 @@ rational rational::operator- (rational ratBruch) const
     ratErgebnis.setZaehler(getZaehler() * ratBruch.getNenner() - getNenner() * ratBruch.getZaehler());
     ratErgebnis.setNenner(getNenner() * ratBruch.getNenner());
     ratErgebnis.kuerze();
+    ratErgebnis.changeSign();
+
     return ratErgebnis;
 }
 
@@ -94,6 +97,8 @@ rational rational::operator*(rational ratBruch) const
     ratErgebnis.setZaehler(getZaehler()*ratBruch.getZaehler());
     ratErgebnis.setNenner(getNenner()*ratBruch.getNenner());
     ratErgebnis.kuerze();
+    ratErgebnis.changeSign();
+
     return ratErgebnis;
 }
 
@@ -103,8 +108,8 @@ rational rational::operator/(rational ratBruch) const
 
     ratErgebnis.setZaehler(getZaehler()*ratBruch.getNenner());
     ratErgebnis.setNenner(getNenner()*ratBruch.getZaehler());
-
     ratErgebnis.kuerze();
+    ratErgebnis.changeSign();
 
     return ratErgebnis;
 }
@@ -176,6 +181,15 @@ void rational::kuerze()
     int iGgt = ggt();
     setZaehler(getZaehler() / iGgt);
     setNenner(getNenner() / iGgt);
+}
+
+void rational::changeSign()
+{
+    if((getZaehler()<0&&getNenner()<0)||(getZaehler()>0&&getNenner()<0))
+    {
+        setZaehler(getZaehler()*(-1));
+        setNenner(getNenner()*(-1));
+    }
 }
 
 double rational::toDouble()
