@@ -22,30 +22,38 @@ int main ()
     // impliziert den Aufruf des Default - Konstruktors
     rational r, s, t;
     int b;
+
+    cout << "********************************************************" << endl;
+    cout << "* Projekt: Rational                                    *" << endl;
+    cout << "*                                                      *" << endl;
+    cout << "* Carsten Bevermann, Christoph Geitner,                *" << endl;
+    cout << "* Jens Reimer, Marc Toepker                            *" << endl;
+    cout << "********************************************************" << endl;
+
     // Per Default wird daher z = 0 und n = 1 gesetzt
     cout << r << endl;
     cout << s << endl;
-    cout << "Geben Sie einen Wert fuer den Zaehler ein:" << endl;
+    cout << "Geben Sie einen Wert fuer den Zaehler des ersten Bruches ein: ";
     cin >> b;
     // Anwendung der Funktion setZaehler auf das Objekt r
     r.setZaehler (b);
-    cout << "Geben Sie einen Wert fuer den Nenner ein:" << endl;
+    cout << "Geben Sie einen Wert fuer den Nenner des ersten Bruches ein: ";
     cin >> b;
     // Anwendung der Funktion setNenner auf das Objekt r
     r.setNenner (b);
     // Ausgabe des geaenderten Objektzustandes
-    cout << "r = " << r << endl;
+    cout << "r = " << r << endl << endl;
 
-    cout << "Geben Sie einen Wert fuer den Zaehler ein:" << endl;
+    cout << "Geben Sie einen Wert fuer den Zaehler des zweiten Bruches ein:" << endl;
     cin >> b;
     // Anwendung der Funktion setZaehler auf das Objekt r
     s.setZaehler (b);
-    cout << "Geben Sie einen Wert fuer den Nenner ein:" << endl;
+    cout << "Geben Sie einen Wert fuer den Nenner des zweiten Bruches ein:" << endl;
     cin >> b;
     // Anwendung der Funktion setNenner auf das Objekt r
     s.setNenner (b);
     // Ausgabe des geaenderten Objektzustandes
-    cout << "s = " << s << endl;
+    cout << "s = " << s << endl << endl;
 
     // Addieren der beiden Brueche
     t = r + s;
@@ -55,25 +63,37 @@ int main ()
     t = r-s;
     cout << "r - s = " << t << endl;
 
-    // multiplizieren der beiden Brueche
+    // Multiplizieren der beiden Brueche
     t = r * s;
     cout << "r * s = " << t << endl;
 
-    // dividieren der beiden Brueche
+    // Dividieren der beiden Brueche
     t = r / s;
-    cout << "r / s = " << t << endl;
+    cout << "r / s = " << t << endl << endl;
 
-    cout << r.getSerial() << s.getSerial() << t.getSerial()<<endl;
+    // Ausgabe der Seriennummern
+    cout << "Seriennummern:" << endl;
+    cout << "r: " << r.getSerial() << endl;
+    cout << "s: " << s.getSerial() << endl;
+    cout << "t: " << t.getSerial() << endl << endl;
 
-    cout << t.toDouble() << endl;
+    // Ausgabe der Brueche als Dezimalzahl
+    cout << "Brueche als Dezimalzahl:" << endl;
+    cout << "r: " << r.toDouble() << endl;
+    cout << "s: " << s.toDouble() << endl;
+    cout << "t: " << t.toDouble() << endl << endl;
 
+    // Ausgabe der Vergleichsoperationen
+    cout << "Anwendung der Vergleichsoperatoren auf die Brueche r und s:" << endl;
     cout << "r > s = " << (r > s) << endl;
 
     cout << "r < s = " << (r < s) << endl;
 
     cout << "r == s = " << (r == s) << endl;
 
-    cout << "r != s = " << (r != s) << endl;
+    cout << "r != s = " << (r != s) << endl << endl;
+
+    cout << "********************************************************" << endl;
 
     return 0;
 }

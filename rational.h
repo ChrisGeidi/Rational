@@ -27,7 +27,6 @@ class rational
 public:
     static int counter;
     rational();
-    rational(int);
     rational(int, int);
     int getZaehler() const;
     int getNenner() const;
