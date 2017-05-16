@@ -34,7 +34,8 @@ public:
     void setZaehler(int);
     void setNenner(int);
     void changeSign();
-    double toDouble();
+    double toDouble() const;
+    std::string toString() const;
     rational operator+ (rational) const;
     rational operator- (rational) const;
     rational operator* (rational) const;

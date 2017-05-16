@@ -87,6 +87,10 @@ int main ()
     cout << "s: " << s.toDouble() << endl;
     cout << "t: " << t.toDouble() << endl << endl;
 
+    // Ausgabe eines Bruches als string
+    cout << "Ergebnis als string:" << endl;
+    cout << "t: " << t.toString() << endl << endl;
+
     // Ausgabe der Vergleichsoperationen
     cout << "Anwendung der Vergleichsoperatoren auf die Brueche r und s:" << endl;
     cout << "r > s = " << (r > s) << endl;

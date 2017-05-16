@@ -14,10 +14,9 @@
 
 #include "rational.h"
 #include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
+#include <string>
+#include <sstream>
 
-#define MAX_LENGTH 30
 using namespace std;
 
 int rational::counter = 0;
@@ -192,9 +191,18 @@ void rational::changeSign()
     }
 }
 
-double rational::toDouble()
+double rational::toDouble() const
 {
     return (double)getZaehler() / (double)getNenner();
+}
+
+string rational::toString() const
+{
+    stringstream ssTemp;
+
+    ssTemp << getZaehler() << "/" << getNenner();
+
+    return ssTemp.str();
 }
 
 ostream& operator<< (ostream& os, const rational& ratBruch)
