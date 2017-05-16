@@ -16,16 +16,16 @@
 #define RATIONAL_H
 
 #include <iostream>
-using namespace std;
+
 class rational
 {
     int z, n;
-    unsigned int counter;
-    int serial;
+    const int serial;
     void kuerze();
     int ggt() const;
 
 public:
+    static int counter;
     rational();
     rational(int);
     rational(int, int);
@@ -43,7 +43,8 @@ public:
     bool operator< (rational) const;
     bool operator== (rational) const;
     bool operator!= (rational) const;
-    friend ostream& operator<< (ostream& os, const rational& ratBruch);
+    void operator= (rational);
+    friend std::ostream& operator<< (std::ostream& os, const rational& ratBruch);
 
 };
 

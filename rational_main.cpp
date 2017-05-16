@@ -75,8 +75,6 @@ int main ()
 
     cout << "r != s = " << (r != s) << endl;
 
-    //cout << t.toString() << endl;
-
     return 0;
 }
 

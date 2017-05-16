@@ -12,9 +12,6 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
-#ifndef RATIONAL_CPP
-#define RATIONAL_CPP
-
 #include "rational.h"
 #include <iostream>
 #include <stdio.h>
@@ -22,7 +19,8 @@
 
 #define MAX_LENGTH 30
 using namespace std;
-//static rational::counter = 0;
+
+int rational::counter = 0;
 
 rational::rational():rational(0, 1)
 {
@@ -151,6 +149,12 @@ bool rational::operator!= (rational ratBruch) const
     return (bool)(ratTemp.getZaehler() != ratBruch.getZaehler());
 }
 
+void rational::operator= (rational ratBruch)
+{
+    setZaehler(ratBruch.getZaehler());
+    setNenner(ratBruch.getNenner());
+}
+
 int rational::ggt() const
 {
     int a = getZaehler();
@@ -185,7 +189,5 @@ ostream& operator<< (ostream& os, const rational& ratBruch)
 
     return os;
 }
-
-#endif //RATIONAL_CPP
 
 /////////////////// End of File <rational.cpp> ////////////////////////////////
