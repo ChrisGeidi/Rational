@@ -1,0 +1,17 @@
+	Todo Rational Programm
+	
+	Anforderungen:
+		behandlung des Vorzeichens
+		grundrechenarten (überlkagerung der operatoren)
+		Ausgabe in gekürzter form
+		operator <<
+		Relationale Operatoren (<,>,==,<=)
+		Konvertierungsfunktionen
+			toString
+			toDouble
+			...
+		
+		Exception für durch 0 teilen
+		geeignete Exception für << - Operator
+		
+	
