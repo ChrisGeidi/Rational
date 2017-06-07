@@ -47,6 +47,13 @@ public:
     void operator= (rational);
     friend std::ostream& operator<< (std::ostream& os, const rational& ratBruch);
 
+    class ZeroDenominatorException
+    {
+        std::string msg = "Nenner ist NULL!";
+
+    public:
+        void printMsg();
+    };
 };
 
 #endif // RATIONAL_H

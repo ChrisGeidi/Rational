@@ -30,6 +30,9 @@ rational::rational(int iZaehler, int iNenner) : serial(++counter)
 {
     setZaehler(iZaehler);
     setNenner(iNenner);
+
+    if (!getNenner())
+        throw ZeroDenominatorException();
 }
 
 int rational::getZaehler() const
@@ -54,15 +57,10 @@ void rational::setZaehler(int iZaehler)
 
 void rational::setNenner(int iNenner)
 {
-    using namespace std;
-    if(iNenner == 0)
-    {
-        cout << "Fuer den Nenner wird keine 0 akzeptiert!" << endl;
-    }
+    if(!iNenner)
+        throw ZeroDenominatorException();
     else
-    {
         n = iNenner;
-    }
 }
 
 rational rational::operator+ (rational ratBruch) const
@@ -203,6 +201,11 @@ string rational::toString() const
     ssTemp << getZaehler() << "/" << getNenner();
 
     return ssTemp.str();
+}
+
+void rational::ZeroDenominatorException::printMsg()
+{
+    cout << msg << endl;
 }
 
 ostream& operator<< (ostream& os, const rational& ratBruch)
