@@ -67,7 +67,7 @@ int main ()
         cout << "r + s = " << t << endl;
 
         // Subtrahieren der beiden Brueche
-        t = r-s;
+        t = r - s;
         cout << "r - s = " << t << endl;
 
         // Multiplizieren der beiden Brueche
